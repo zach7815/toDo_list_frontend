@@ -14,7 +14,7 @@ const ListItem = ({itemText, toDo, checked,
 
        setToDo(toDos.filter(el=>el.id!==toDo.id))
 
-        UseFetch("/api/deleteOne", "DELETE", toDo)
+        UseFetch("https://todo-app-backend-a4kl.onrender.com/api/deleteOne", "DELETE", toDo)
     }
 
     const toggleComplete= ()=>{
@@ -29,7 +29,7 @@ const ListItem = ({itemText, toDo, checked,
 
       }))
 
-      UseFetch("/api/completeOne", "PUT", toDo)
+      UseFetch("https://todo-app-backend-a4kl.onrender.com/api/completeOne", "PUT", toDo)
     }
 
     return(
