@@ -20,7 +20,7 @@ const handleSubmit= (e)=>{
 
     ])
     setInputText('')
-    UseFetch("/api/addOne", "POST", item)
+    UseFetch("https://todo-app-backend-a4kl.onrender.com/api/addOne", "POST", item)
 }
 
 
