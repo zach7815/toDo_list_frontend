@@ -24,7 +24,7 @@ function App() {
 
   const clearCompleted= ()=>{
     setToDoList(toDoList.filter(item=> item.complete===false))
-    UseFetch("/api/deleteComplete", "DELETE")
+    UseFetch("https://todo-app-backend-a4kl.onrender.com/api/deleteComplete", "DELETE")
 }
 
   useEffect(()=>{
@@ -60,7 +60,7 @@ function App() {
      useEffect(()=>{
 
         const getData= async ()=>{
-          const response= await fetch("/api/loadtoDos");
+          const response= await fetch("https://todo-app-backend-a4kl.onrender.com/api/loadtoDos");
           const result = await response.json();
           setToDoList(result)
         }
