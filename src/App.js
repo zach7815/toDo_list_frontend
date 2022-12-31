@@ -60,7 +60,11 @@ function App() {
      useEffect(()=>{
 
         const getData= async ()=>{
-          const response= await fetch("https://todo-app-backend-a4kl.onrender.com/api/loadtoDos");
+         const options = {
+               method: 'GET',
+                mode: 'cors',
+                  };
+          const response= await fetch("https://todo-app-backend-a4kl.onrender.com/api/loadtoDos", options);
           const result = await response.json();
           console.log(result);
           setToDoList(result)
