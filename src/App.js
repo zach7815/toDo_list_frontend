@@ -62,6 +62,7 @@ function App() {
         const getData= async ()=>{
           const response= await fetch("https://todo-app-backend-a4kl.onrender.com/api/loadtoDos");
           const result = await response.json();
+          console.log(result);
           setToDoList(result)
         }
         getData()
