@@ -70,7 +70,7 @@ function App() {
           setToDoList(result)
         }
         getData()
-     },[toDoList])
+     },[])
 
   return (
     <div className={`App ${darkMode===true?'darkModeBody':'lightmodeContent'}`}>
